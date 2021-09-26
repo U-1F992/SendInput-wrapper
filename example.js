@@ -8,6 +8,7 @@ if (!global.JSON) {
 
 var oWshShell = new ActiveXObject("WScript.Shell");
 
+var INPUT_MOUSE = 0;
 var MOUSEEVENTF_MOVE = 0x0001;
 var MOUSEEVENTF_ABSOLUTE = 0x8000;
 
@@ -19,7 +20,7 @@ while(true) {
     var y = 500 + Math.floor(Math.cos(radius) * 100);
 
     var input = {
-        "type": 0,
+        "type": INPUT_MOUSE,
         "mi": {
             "dx": x,
             "dy": y,
